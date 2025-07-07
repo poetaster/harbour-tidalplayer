@@ -1,6 +1,3 @@
-[submodule "external/isodate"]
-	path = external/isodate
-	url = https://github.com/gweis/isodate
 [submodule "external/mpegdash"]
 	path = external/mpegdash
 	url = https://github.com/sangwonl/python-mpegdash
