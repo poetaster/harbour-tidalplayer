@@ -51,12 +51,11 @@ isodate.path  = $$OUT_PWD/python/isodate
 ratelimit.files = $$files(external/ratelimit/ratelimit/*.py)
 ratelimit.path  = $$OUT_PWD/python/ratelimit
 
-typing.files = $$files(external/typing_extensions-4.11.0/src/*.py)
+typing.files = $$files(external/typing_extensions-4.13.2/src/*.py)
 typing.path  = $$OUT_PWD/python/typing_extensions
 
-dateutil.files = $$files(external/dateutil-2.8.2/dateutil/*.py)
-dateutil.path  = $$OUT_PWD/python/dateutil
+# actually should do this since it's recursive and saves doing the copy file in spec
+libs.path =/usr/share/$${TARGET}/python/dateutil
+libs.files = external/dateutil-2.8.2/dateutil/*
 
-#libs.path = /usr/share/$${TARGET}
-#libs.files = external
-#INSTALLS += libs
+INSTALLS += libs
