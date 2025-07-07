@@ -51,7 +51,7 @@ isodate.path  = $$OUT_PWD/python/isodate
 ratelimit.files = $$files(external/ratelimit/ratelimit/*.py)
 ratelimit.path  = $$OUT_PWD/python/ratelimit
 
-typing.files = $$files(external/typing_extensions-4.13.2/src/*.py)
+typing.files = $$files(external/typing_extensions-4.12.2/src/*.py)
 typing.path  = $$OUT_PWD/python/typing_extensions
 
 # actually should do this since it's recursive and saves doing the copy file in spec
