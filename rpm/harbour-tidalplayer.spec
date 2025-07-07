@@ -13,7 +13,7 @@ Name:       harbour-tidalplayer
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Tidal player for Sailfish OS
-Version:    0.2.0
+Version:    0.2.1
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
@@ -70,7 +70,7 @@ sed -i  '114d'  %{buildroot}%{_datadir}/%{name}/python/tidalapi/user.py
 cp -r python/mpegdash  %{buildroot}%{_datadir}/%{name}/python/mpegdash
 cp -r python/isodate  %{buildroot}%{_datadir}/%{name}/python/isodate
 cp -r python/ratelimit  %{buildroot}%{_datadir}/%{name}/python/ratelimit
-cp -r python/typing_extensions/typing_extensions.py  %{buildroot}%{_datadir}/%{name}/python/typing_extensions.py
+cp -r python/typing_extensions  %{buildroot}%{_datadir}/%{name}/python/typing_extensions
 cp -r python/dateutil  %{buildroot}%{_datadir}/%{name}/python/dateutil
 
 rm -rf %{buildroot}/%{_datadir}/%{name}/share
