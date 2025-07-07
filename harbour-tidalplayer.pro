@@ -34,19 +34,14 @@ OTHER_FILES += harbour-tidalplayer.desktop \
 
 COPIES += tidalpython
 COPIES += mpegdash
-COPIES += isodate
 COPIES += ratelimit
 COPIES += typing
-COPIES += dateutil
 
 tidalpython.files = $$files(external/tidalapi/*.py)
 tidalpython.path  = $$OUT_PWD/python/tidalapi
 
 mpegdash.files = $$files(external/mpegdash/mpegdash/*.py)
 mpegdash.path  = $$OUT_PWD/python/mpegdash
-
-isodate.files = $$files(external/isodate-0.7.2/src/isodate/*.py)
-isodate.path  = $$OUT_PWD/python/isodate
 
 ratelimit.files = $$files(external/ratelimit/ratelimit/*.py)
 ratelimit.path  = $$OUT_PWD/python/ratelimit
@@ -58,4 +53,12 @@ typing.path  = $$OUT_PWD/python/typing_extensions
 libs.path =/usr/share/$${TARGET}/python/dateutil
 libs.files = external/dateutil-2.8.2/dateutil/*
 
+isodate.files = external/isodate-0.6.1/*
+isodate.path  = /usr/share/$${TARGET}/python/isodate
+
+future.path =/usr/share/$${TARGET}/python/python-future
+future.files = external/python-future-1.0.0/*
+
+INSTALLS += isodate
 INSTALLS += libs
+INSTALLS += future
